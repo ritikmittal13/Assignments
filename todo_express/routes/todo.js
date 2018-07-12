@@ -1,9 +1,6 @@
 const route=require('express').Router()
 
-let todo=[
-    {task: "Go to Market", done:"Y"},
-    {task: "Go to Laundry", done:"N"}
-]
+let todo=[]
 route.get('/',(req,res)=>res.send(todo))
 route.get('/:id',(req,res)=>res.send(todo[req.params.id]))
 route.post('/',(req,res)=>{
